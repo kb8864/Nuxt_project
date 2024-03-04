@@ -8,3 +8,12 @@ import { NuxtLayout } from '#build/components';
   </div>
 </template>
 
+<script setup>
+  useHead({
+    title: "Nuxt3",
+    link: [{
+      rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Micro+5&family=Permanent+Marker&display=swap"
+    }]
+
+  })
+</script>

@@ -15,4 +15,9 @@
     color: wheat;
     text-align: center;
   }
+
+  html{
+  font-family: "Micro 5", sans-serif;
+
+  }
 </style>
