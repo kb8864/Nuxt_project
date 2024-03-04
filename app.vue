@@ -1,7 +1,7 @@
 <template>
   <div>
-    <NuxtLayout>
-      <NuxtPage />
+    <!-- <NuxtLayout>
+      <NuxtPage /> -->
 
     <!-- <p>{{ users[0].id }}, {{ users[0].name }} </p> -->
       <ui>
@@ -10,13 +10,18 @@
           {{ user.id }}, {{user.name}}
         </li>
       </ui>
-    </NuxtLayout>
+    <!-- </NuxtLayout> -->
   </div>
 </template>
 
 
 <script setup>
-  const { data: users } = await useFetch('https://jsonplaceholder.typicode.com/users')
+// useFetchで例外エラーを試しに発生させてみる↓
+const { data: users, error } = await useFetch('https://jsonplaceholder.typicode.com/usersssss')
+  // console.log(error.value)
+  if(error.value) {
+    throw createError({ statusCode: 404, statusMessage: 'ページが見つかりません'})
+  }
   useHead({
   title: "Nuxt App", // titleタグ設定
   link: [
