@@ -1,7 +1,11 @@
 <template>
   <div>
-    <!-- <NuxtLayout>
-      <NuxtPage /> -->
+    <NuxtLayout>
+      <NuxtPage />
+      <img src="~/assets/1.jpeg" alt="1">
+      <img src="~/assets/2.jpeg" alt="2">
+      <img src="~/assets/3.jpeg" alt="3">
+
 
     <!-- <p>{{ users[0].id }}, {{ users[0].name }} </p> -->
       <ui>
@@ -10,15 +14,15 @@
           {{ user.id }}, {{user.name}}
         </li>
       </ui>
-    <!-- </NuxtLayout> -->
+    </NuxtLayout>
   </div>
 </template>
 
 
 <script setup>
 // useFetchで例外エラーを試しに発生させてみる↓
-const { data: users, error } = await useFetch('https://jsonplaceholder.typicode.com/usersssss')
-  // console.log(error.value)
+const { data: users, error } = await useFetch('https://jsonplaceholder.typicode.com/users')
+
   if(error.value) {
     throw createError({ statusCode: 404, statusMessage: 'ページが見つかりません'})
   }
