@@ -7,9 +7,9 @@
 </template>
 
 <style>
-  .container{
+  /* .container{
     color: red;
-  }
+  } */
   footer {
     background-color: orange;
     color: wheat;
