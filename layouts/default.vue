@@ -17,7 +17,7 @@
   }
 
   html{
-  font-family: "Micro 5", sans-serif;
+    font-family: 'Permanent Marker', cursive;
 
   }
 </style>
