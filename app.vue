@@ -3,17 +3,8 @@
     <NuxtLayout>
       <NuxtPage />
       <img src="~/assets/1.jpeg" alt="1">
-      <img src="~/assets/2.jpeg" alt="2">
-      <img src="~/assets/3.jpeg" alt="3">
-
 
     <!-- <p>{{ users[0].id }}, {{ users[0].name }} </p> -->
-      <ui>
-        <li v-for="user in users" :key="user.id">
-          <!-- 以下はコンテンツ -->
-          {{ user.id }}, {{user.name}}
-        </li>
-      </ui>
     </NuxtLayout>
   </div>
 </template>
